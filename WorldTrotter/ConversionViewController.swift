@@ -90,6 +90,23 @@ class ConversionViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        var hour = Calendar.current.component(.hour, from: Date())
+        print(hour)
+        switch hour {
+        case 0...7:
+            view.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+        case 8...15:
+            view.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        case 15...16:
+            view.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        case 17...24:
+            view.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+        default: break
+        }
+    }
+    
     
     
 }
