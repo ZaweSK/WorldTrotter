@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "degrees Fahrenheit"; ObjectID = "Bit-6e-CdG"; */
+"Bit-6e-CdG.text" = "degrees Fahrenheit";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "EPj-Vv-Z7X"; */
+"EPj-Vv-Z7X.title" = "Map";
+
+/* Class = "UIBarButtonItem"; title = "My Location"; ObjectID = "F3x-NG-GNz"; */
+"F3x-NG-GNz.title" = "My Location";
+
+/* Class = "UIBarButtonItem"; title = "Random"; ObjectID = "P0v-gK-5Fm"; */
+"P0v-gK-5Fm.title" = "Random";
+
+/* Class = "UILabel"; text = "degrees Celsius"; ObjectID = "Vx6-Jj-Bcr"; */
+"Vx6-Jj-Bcr.text" = "degrees Celsius";
+
+/* Class = "UILabel"; text = "is really"; ObjectID = "XiB-SJ-UtB"; */
+"XiB-SJ-UtB.text" = "is really";
+
+/* Class = "UITabBarItem"; title = "Coversion"; ObjectID = "c65-Oy-1Pp"; */
+"c65-Oy-1Pp.title" = "Coversion";
+
+/* Class = "UITextField"; placeholder = "value"; ObjectID = "dwR-9t-POp"; */
+"dwR-9t-POp.placeholder" = "value";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "rZ4-PG-7BO"; */
+"rZ4-PG-7BO.text" = "100";
+
+/* Class = "UITabBarItem"; title = "Web"; ObjectID = "wMh-lm-qVT"; */
+"wMh-lm-qVT.title" = "Web";
