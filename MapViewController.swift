@@ -41,6 +41,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     
     override func loadView() {
+        locationManager = CLLocationManager()
         mapView = MKMapView()
         view = mapView
         mapView.delegate = self

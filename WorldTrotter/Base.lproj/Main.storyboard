@@ -103,9 +103,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="myLocationButton" destination="F3x-NG-GNz" id="QAN-UY-ocO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwq-B0-ISM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
