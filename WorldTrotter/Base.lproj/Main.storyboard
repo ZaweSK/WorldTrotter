@@ -85,7 +85,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1854" y="929"/>
+            <point key="canvasLocation" x="1034" y="949"/>
         </scene>
         <!--Map-->
         <scene sceneID="8eh-U2-iFh">
@@ -95,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwq-B0-ISM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1973.5999999999999" y="134.48275862068968"/>
+            <point key="canvasLocation" x="2030" y="936"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rUr-65-jkY">
@@ -150,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e33-7K-PBO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1973.5999999999999" y="-593.25337331334333"/>
+            <point key="canvasLocation" x="2031" y="134"/>
         </scene>
     </scenes>
     <resources>
