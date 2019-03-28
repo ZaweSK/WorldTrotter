@@ -11,11 +11,15 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
 {
+    // MARK: - Stored Properities
+    
     var mapView: MKMapView!
     var locationManager : CLLocationManager?
     var annotationList: [MKAnnotation]?
     var pinIndex = 0
     
+    
+    // MARK: - @IBActions & @IBOutlets
     
     @IBAction func getRandomLocation(_ sender: UIBarButtonItem) {
         let region = MKCoordinateRegion(center: annotationList![pinIndex].coordinate,
@@ -27,21 +31,24 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     @IBAction func showMyLocation(_ sender: UIBarButtonItem) {
+
         locationManager?.requestWhenInUseAuthorization()
         mapView.showsUserLocation = true
     }
+    
+    // MARK: - MKMapViewDelegate methods
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         let zoomInRegion = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
         mapView.setRegion(zoomInRegion, animated: true)
     }
     
-    
-    
-    
+    // MARK: - VC life cycle
     
     override func loadView() {
+        
         locationManager = CLLocationManager()
+        
         mapView = MKMapView()
         view = mapView
         mapView.delegate = self
@@ -55,7 +62,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.addAnnotations(annotationList!)
         
         
-        //segmentCOntrol
+        // segment control in code
         
         let standardString = NSLocalizedString("Standard", comment: "Standard Map View")
         let satelliteString = NSLocalizedString("Satellite", comment: "Satellite Map View")
@@ -63,15 +70,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         let segmentedControl = UISegmentedControl(items: [standardString,satelliteString,hybridString])
         
-        
         segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         segmentedControl.selectedSegmentIndex = 0
-        
         segmentedControl.addTarget(self, action: #selector(mapTypeChanged(_:)), for: .valueChanged)
         
         
-        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(segmentedControl)
+        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         
         let topConstraint = segmentedControl.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8)
         let margins = view.layoutMarginsGuide
@@ -84,11 +89,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        print("MapViwController loded its view")
-    }
+    
+    // MARK: - Action for SegmentedControl
     
     @objc private func mapTypeChanged(_ segControl: UISegmentedControl){
         switch segControl.selectedSegmentIndex{
@@ -101,16 +103,4 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         default: break
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -138,7 +138,7 @@
             </objects>
             <point key="canvasLocation" x="1034.4000000000001" y="134.48275862068968"/>
         </scene>
-        <!--Web-->
+        <!--Web View Controller-->
         <scene sceneID="Zff-BU-i6J">
             <objects>
                 <viewController id="Crc-PO-e8c" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
@@ -154,18 +154,25 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="xUc-nh-cWn">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="xUc-nh-cWn" firstAttribute="centerY" secondItem="d2L-At-XFm" secondAttribute="centerY" id="8S7-O2-LTM"/>
                             <constraint firstItem="y7a-xP-NoF" firstAttribute="leading" secondItem="Tcx-eM-B5U" secondAttribute="leading" id="HUw-Jm-9CK"/>
                             <constraint firstItem="y7a-xP-NoF" firstAttribute="top" secondItem="Tcx-eM-B5U" secondAttribute="top" id="WBc-bX-Yns"/>
                             <constraint firstItem="Tcx-eM-B5U" firstAttribute="trailing" secondItem="y7a-xP-NoF" secondAttribute="trailing" id="aPr-FT-MCJ"/>
+                            <constraint firstItem="xUc-nh-cWn" firstAttribute="centerX" secondItem="d2L-At-XFm" secondAttribute="centerX" id="feA-RM-83d"/>
                             <constraint firstItem="Tcx-eM-B5U" firstAttribute="bottom" secondItem="y7a-xP-NoF" secondAttribute="bottom" id="zNQ-o1-D62"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tcx-eM-B5U"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Web" id="wMh-lm-qVT"/>
+                    <tabBarItem key="tabBarItem" title="" systemItem="search" id="wMh-lm-qVT"/>
                     <connections>
+                        <outlet property="spinner" destination="xUc-nh-cWn" id="Pa6-83-9CA"/>
                         <outlet property="webView" destination="y7a-xP-NoF" id="qK6-zD-FkR"/>
                     </connections>
                 </viewController>
